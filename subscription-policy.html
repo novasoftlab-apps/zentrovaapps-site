@@ -1,100 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subscription Policy — Zentrova Apps</title>
-<meta name="description" content="Subscription Policy for all Zentrova Apps mobile applications.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Subscription Policy — Zentrovaapps (SMC-Private) Limited</title>
+<meta name="description" content="Subscription and in-app purchase policy for all Zentrovaapps Android applications: plans, free trials, auto-renewal, price changes, cancellation steps and Google Play refunds.">
+<meta name="theme-color" content="#070912">
+<link rel="canonical" href="https://zentrovaapps.com/subscription-policy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#ffffff; --bg-alt:#f5f7fa; --ink:#12151c; --ink-muted:#5b6270; --ink-faint:#9499a3;
-    --border:#e4e7ec; --navy:#163b6d; --navy-deep:#0e2a50; --teal:#0ea394; --maxw:840px;
-  }
-  *{ box-sizing:border-box; }
-  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',-apple-system,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
-  a{ color:var(--navy); }
-  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
-  h1,h2{ font-family:'Manrope',sans-serif; color:var(--ink); }
-  .nav{ position:sticky; top:0; z-index:20; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); }
-  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; max-width:1160px; margin:0 auto; padding-left:32px; padding-right:32px; }
-  .brand{ display:flex; align-items:center; gap:8px; font-family:'Manrope',sans-serif; font-weight:800; font-size:17px; text-decoration:none; color:var(--ink); }
-  .brand-mark{ width:24px; height:24px; border-radius:6px; background:linear-gradient(135deg,var(--navy),var(--teal)); }
-  .nav-back{ font-size:14px; font-weight:500; color:var(--ink-muted); text-decoration:none; }
-  .nav-back:hover{ color:var(--ink); }
-  .doc-header{ padding:56px 0 28px; }
-  .eyebrow{ font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); }
-  h1{ font-size:clamp(28px,4vw,38px); font-weight:800; margin:14px 0 8px; letter-spacing:-0.01em; }
-  .updated{ font-size:13.5px; color:var(--ink-faint); }
-  article{ padding-bottom:80px; }
-  h2{ font-size:19px; font-weight:700; margin:40px 0 12px; }
-  p, li{ font-size:15px; color:var(--ink-muted); }
-  ul{ padding-left:20px; margin:10px 0; }
-  li{ margin-bottom:6px; }
-  .callout{ background:var(--bg-alt); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin:18px 0; font-size:14px; color:var(--ink-muted); }
-  footer{ border-top:1px solid var(--border); padding:32px 0; text-align:center; font-size:12.5px; color:var(--ink-faint); }
+/* ZENTROVAAPPS (SMC-PRIVATE) LIMITED — shared stylesheet
+   Used by index.html, privacy-policy.html, terms-of-use.html, subscription-policy.html */
+
+:root{
+  --bg:#070912;
+  --surface:rgba(255,255,255,.035);
+  --surface-2:rgba(255,255,255,.055);
+  --line:rgba(255,255,255,.09);
+  --line-2:rgba(255,255,255,.16);
+  --ink:#f2f4fb;
+  --ink-2:#b9c0d8;
+  --ink-3:#7f89a8;
+  --brand:#7c5cff;
+  --brand-2:#22d3ee;
+  --ok:#34d399;
+  --warn:#fbbf24;
+  --radius:18px;
+  --radius-sm:12px;
+  --maxw:1160px;
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+
+/* ---------- ambient background ---------- */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+.aurora span:nth-child(1){width:620px;height:620px;top:-220px;left:-160px;background:radial-gradient(circle,#7c5cff,transparent 68%)}
+.aurora span:nth-child(2){width:520px;height:520px;top:-120px;right:-140px;background:radial-gradient(circle,#22d3ee,transparent 68%);opacity:.34}
+.aurora span:nth-child(3){width:560px;height:560px;top:900px;left:44%;background:radial-gradient(circle,#f472b6,transparent 70%);opacity:.2}
+.grid-lines{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 30%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 30%,transparent 78%);
+}
+.page{position:relative;z-index:1}
+
+/* ---------- layout ---------- */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:24px}
+.section{padding:96px 0}
+.section-head{max-width:660px;margin-bottom:48px}
+.section-head.center{margin-inline:auto;text-align:center}
+
+/* ---------- type ---------- */
+h1,h2,h3,h4{line-height:1.18;margin:0;letter-spacing:-.022em;font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.035em}
+h2{font-size:clamp(1.9rem,3.6vw,2.75rem)}
+h3{font-size:1.16rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.09rem;color:var(--ink-2)}
+.muted{color:var(--ink-3)}
+.grad{
+  background:linear-gradient(100deg,#a78bfa 0%,#22d3ee 48%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brand-2);margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--brand-2);opacity:.7}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:rgba(7,9,18,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;letter-spacing:-.02em;font-size:1.03rem}
+.brand-mark{
+  width:34px;height:34px;border-radius:10px;flex:none;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:.92rem;
+  box-shadow:0 6px 20px rgba(124,92,255,.4);
+}
+.nav-links{display:flex;gap:6px;margin-left:auto;align-items:center}
+.nav-links a{
+  text-decoration:none;color:var(--ink-2);font-size:.9rem;font-weight:500;
+  padding:8px 13px;border-radius:9px;transition:.18s;
+}
+.nav-links a:hover{color:var(--ink);background:var(--surface-2)}
+.nav-links a.active{color:var(--ink);background:var(--surface-2)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 24px;border-radius:12px;text-decoration:none;
+  font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;
+  white-space:nowrap;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--brand),#5b8cff 55%,var(--brand-2));
+  color:#fff;box-shadow:0 10px 30px -8px rgba(124,92,255,.65);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 38px -10px rgba(124,92,255,.8)}
+.btn-ghost{background:var(--surface);border-color:var(--line-2);color:var(--ink)}
+.btn-ghost:hover{background:var(--surface-2);transform:translateY(-2px)}
+
+/* ---------- hero ---------- */
+.hero{padding:104px 0 88px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 15px 7px 9px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line-2);
+  font-size:.8rem;color:var(--ink-2);margin-bottom:26px;
+}
+.pill b{color:var(--ink);font-weight:600}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(52,211,153,.16)}
+.hero p.lead{max-width:520px;margin-top:22px;font-size:1.13rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
+.hero-note{margin-top:20px;font-size:.85rem;color:var(--ink-3)}
+
+.stats{display:flex;flex-wrap:wrap;gap:38px;margin-top:52px;padding-top:34px;border-top:1px solid var(--line)}
+.stat b{display:block;font-size:1.75rem;font-weight:700;letter-spacing:-.03em}
+.stat span{font-size:.82rem;color:var(--ink-3)}
+
+/* phone mock */
+.phone-stage{position:relative;display:grid;place-items:center}
+.phone{
+  width:270px;border-radius:36px;padding:11px;
+  background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.03));
+  border:1px solid var(--line-2);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 60px -20px rgba(124,92,255,.4);
+}
+.phone-screen{
+  border-radius:27px;background:linear-gradient(175deg,#111527,#080a14);
+  padding:22px 18px 26px;overflow:hidden;
+}
+.ps-top{display:flex;justify-content:space-between;align-items:center;font-size:.68rem;color:var(--ink-3);margin-bottom:20px}
+.ps-tv{
+  border-radius:12px;border:1px solid var(--line);background:var(--surface);
+  padding:12px 14px;display:flex;align-items:center;gap:10px;margin-bottom:22px;
+}
+.ps-tv .dot{flex:none}
+.ps-tv div{font-size:.76rem;line-height:1.35}
+.ps-tv small{display:block;color:var(--ink-3);font-size:.66rem}
+.dpad{
+  width:170px;height:170px;margin:0 auto 22px;border-radius:50%;
+  background:conic-gradient(from 45deg,rgba(124,92,255,.22),rgba(34,211,238,.16),rgba(244,114,182,.18),rgba(124,92,255,.22));
+  border:1px solid var(--line-2);display:grid;place-items:center;position:relative;
+}
+.dpad::before{content:"";position:absolute;inset:14px;border-radius:50%;background:#0b0f1e;border:1px solid var(--line)}
+.dpad b{
+  position:relative;width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  display:grid;place-items:center;font-size:.7rem;color:#fff;font-weight:700;
+  box-shadow:0 8px 24px -6px rgba(124,92,255,.8);
+}
+.ps-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.ps-keys i{
+  height:38px;border-radius:10px;background:var(--surface);border:1px solid var(--line);
+  display:grid;place-items:center;font-style:normal;font-size:.7rem;color:var(--ink-2);
+}
+.float-card{
+  position:absolute;padding:11px 15px;border-radius:13px;
+  background:rgba(12,16,32,.92);border:1px solid var(--line-2);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  font-size:.76rem;display:flex;align-items:center;gap:9px;
+  box-shadow:0 18px 40px -14px rgba(0,0,0,.85);
+}
+.float-card.a{top:12%;left:-6%}
+.float-card.b{bottom:14%;right:-8%}
+
+/* ---------- cards ---------- */
+.cards{display:grid;gap:20px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{
+  padding:26px;border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);
+  transition:.22s ease;
+}
+.card:hover{border-color:var(--line-2);background:var(--surface-2);transform:translateY(-3px)}
+.card p{color:var(--ink-2);font-size:.93rem;margin:9px 0 0}
+.card-ico{
+  width:42px;height:42px;border-radius:11px;margin-bottom:16px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(124,92,255,.28),rgba(34,211,238,.2));
+  border:1px solid var(--line-2);
+}
+.card-ico svg{width:20px;height:20px;stroke:#c7b8ff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* app tiles */
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.app-tile{
+  display:flex;align-items:center;gap:15px;padding:20px;
+  border-radius:var(--radius-sm);background:var(--surface);
+  border:1px solid var(--line);text-decoration:none;transition:.22s;
+}
+a.app-tile:hover{background:var(--surface-2);border-color:var(--line-2);transform:translateY(-3px)}
+.app-logo{
+  width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;
+  font-weight:800;font-size:.9rem;color:#fff;letter-spacing:-.02em;
+}
+.app-tile b{display:block;font-size:.96rem;font-weight:600}
+.app-tile span{font-size:.79rem;color:var(--ink-3)}
+
+/* legal link cards */
+.legal-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.legal-card{
+  display:block;padding:26px;border-radius:var(--radius);text-decoration:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid var(--line);transition:.22s;
+}
+.legal-card:hover{border-color:var(--brand);transform:translateY(-3px)}
+.legal-card b{display:block;font-size:1.05rem;margin-bottom:7px}
+.legal-card p{font-size:.88rem;color:var(--ink-2);margin:0}
+.legal-card em{
+  display:inline-block;margin-top:14px;font-style:normal;font-size:.83rem;
+  color:var(--brand-2);font-weight:600;
+}
+
+/* ---------- company strip ---------- */
+.company{
+  border-radius:22px;padding:40px;
+  background:linear-gradient(150deg,rgba(124,92,255,.14),rgba(34,211,238,.07) 60%,transparent);
+  border:1px solid var(--line-2);
+}
+
+/* ---------- cta band ---------- */
+.cta-band{
+  border-radius:24px;padding:56px 40px;text-align:center;
+  background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(34,211,238,.12));
+  border:1px solid var(--line-2);
+}
+.cta-band p{max-width:520px;margin:14px auto 28px;color:var(--ink-2)}
+
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line);padding:56px 0 34px;margin-top:40px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.foot-grid h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-3);margin-bottom:14px}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.foot-grid a{color:var(--ink-2);text-decoration:none;font-size:.9rem}
+.foot-grid a:hover{color:var(--ink)}
+.foot-about p{font-size:.88rem;color:var(--ink-3);max-width:300px;margin-top:14px}
+.foot-bottom{
+  margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:.83rem;color:var(--ink-3);
+}
+
+/* ================= LEGAL PAGES ================= */
+.legal-hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.legal-hero h1{font-size:clamp(2rem,4.6vw,3.1rem)}
+.legal-hero .lead{margin-top:16px;max-width:720px}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);font-size:.8rem;color:var(--ink-2);
+}
+.chip b{color:var(--ink);font-weight:600}
+
+.legal-layout{display:grid;grid-template-columns:250px 1fr;gap:56px;padding:52px 0 90px;align-items:start}
+.toc{position:sticky;top:92px}
+.toc h4{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-3);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t;padding:0;margin:0;display:grid;gap:2px}
+.toc li{counter-increment:t}
+.toc a{
+  display:block;text-decoration:none;color:var(--ink-3);font-size:.855rem;
+  padding:7px 11px;border-radius:8px;border-left:2px solid transparent;transition:.18s;
+}
+.toc a::before{content:counter(t) ". ";color:var(--ink-3);opacity:.6}
+.toc a:hover{color:var(--ink);background:var(--surface)}
+
+.legal-body{max-width:790px;min-width:0}
+.legal-body h2{
+  font-size:1.42rem;margin:52px 0 14px;padding-top:14px;scroll-margin-top:96px;
+  letter-spacing:-.02em;
+}
+.legal-body h2:first-of-type{margin-top:0}
+.legal-body h3{font-size:1.03rem;margin:28px 0 10px;color:#dfe4f5}
+.legal-body p,.legal-body li{color:var(--ink-2);font-size:.96rem}
+.legal-body ul,.legal-body ol{padding-left:22px;margin:0 0 1rem}
+.legal-body li{margin-bottom:8px}
+.legal-body strong{color:var(--ink);font-weight:600}
+.legal-body a{color:var(--brand-2);text-decoration:none;border-bottom:1px solid rgba(34,211,238,.35)}
+.legal-body a:hover{border-bottom-color:var(--brand-2)}
+.legal-body hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+
+.note{
+  border-radius:var(--radius-sm);padding:18px 20px;margin:22px 0;
+  background:rgba(124,92,255,.09);border:1px solid rgba(124,92,255,.3);
+  border-left:3px solid var(--brand);
+}
+.note.warn{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.32);border-left-color:var(--warn)}
+.note.ok{background:rgba(52,211,153,.08);border-color:rgba(52,211,153,.3);border-left-color:var(--ok)}
+.note p:last-child{margin-bottom:0}
+.note b{color:var(--ink)}
+
+.table-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:var(--radius-sm)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.9rem}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--surface-2);font-weight:600;color:var(--ink);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+td{color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+
+.contact-box{
+  border-radius:var(--radius);padding:26px;margin-top:26px;
+  background:var(--surface);border:1px solid var(--line);
+}
+.contact-box b{display:block;margin-bottom:6px}
+.contact-box p{margin:0 0 4px;font-size:.93rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .nav-links .btn{display:none}
+}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:52px}
+  .phone-stage{order:-1}
+  .float-card.a{left:2%}
+  .float-card.b{right:2%}
+  .legal-layout{grid-template-columns:1fr;gap:32px}
+  .toc{position:static;padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .toc ol{grid-template-columns:1fr 1fr;display:grid}
+  .cols-3,.apps,.legal-cards{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:620px){
+  .section{padding:68px 0}
+  .nav-links{display:none}
+  .cols-3,.apps,.legal-cards,.toc ol{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .float-card{display:none}
+  .company,.cta-band{padding:30px 22px}
+  .stats{gap:26px}
+}
+
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="/" class="brand"><span class="brand-mark"></span>Zentrova</a>
-    <a href="/" class="nav-back">← Back to home</a>
-  </div>
-</nav>
+<div class="aurora"><span></span><span></span><span></span></div>
+<div class="grid-lines"></div>
 
-<div class="wrap">
-  <header class="doc-header">
-    <div class="eyebrow">Legal</div>
-    <h1>Subscription Policy</h1>
-    <p class="updated">Last updated: July 15, 2026 · Applies to all Zentrova Apps applications</p>
+<div class="page">
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Z</span>
+        <span>Zentrova<span class="grad">apps</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-use.html">Terms</a>
+        <a class="active" href="subscription-policy.html">Subscriptions</a>
+        <a href="mailto:support@zentrovaapps.com">Support</a>
+      </nav>
+    </div>
   </header>
 
-  <article>
-    <p>This Subscription Policy explains how auto-renewing subscriptions and in-app purchases work across Zentrova Apps applications available on Google Play. It should be read together with our <a href="/terms-and-conditions.html">Terms & Conditions</a>.</p>
-
-    <h2>1. Subscription Plans & Pricing</h2>
-    <p>Where an App offers a subscription, the available plans, duration (for example, weekly, monthly, or yearly), and price are displayed within the App and on its Google Play Store listing before you subscribe. Prices are shown in your local currency where supported and may vary by country.</p>
-
-    <h2>2. Free Trials</h2>
-    <p>Where a free trial is offered, the trial length and the price that will be charged afterward are clearly disclosed before you start the trial. Unless you cancel before the trial ends, it will automatically convert into a paid subscription and you will be charged the displayed price.</p>
-
-    <h2>3. Billing & Auto-Renewal</h2>
-    <p>Subscriptions automatically renew for the same duration and at the then-current price unless cancelled at least 24 hours before the end of the current billing period. Payment is charged to your Google Play account at confirmation of purchase and at the start of each new billing period.</p>
-
-    <h2>4. Managing or Cancelling Your Subscription</h2>
-    <p>All subscriptions are billed and managed through Google Play, not directly by us. To view, change, or cancel a subscription:</p>
-    <ul>
-      <li>Open the Google Play Store app</li>
-      <li>Tap your profile icon → Payments & subscriptions → Subscriptions</li>
-      <li>Select the Zentrova app subscription you want to manage</li>
-      <li>Tap Cancel subscription and follow the prompts</li>
-    </ul>
-    <div class="callout">
-      Cancelling stops future renewals but does not refund the current billing period — you'll keep access until the end of the period you've already paid for.
+  <section class="legal-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1>Subscription &amp; Purchase Policy</h1>
+      <p class="lead">
+        This policy explains how paid plans work across every Zentrovaapps application — what you get, how
+        free trials and auto-renewal operate, how to cancel, and how refunds are handled through Google Play.
+        It forms part of our <a href="terms-of-use.html">Terms of Use</a>.
+      </p>
+      <div class="meta-row">
+        <span class="chip">Effective date: <b>2 September 2026</b></span>
+        <span class="chip">Last updated: <b>2 September 2026</b></span>
+        <span class="chip">Billing partner: <b>Google Play</b></span>
+      </div>
     </div>
+  </section>
 
-    <h2>5. Price Changes</h2>
-    <p>If we change the price of a subscription, Google Play will notify you in advance of the new price taking effect. If you do not agree to the new price, you can cancel before it applies; if you do nothing, the new price will apply at your next renewal, consistent with Google Play's billing policies.</p>
+  <div class="wrap legal-layout">
 
-    <h2>6. Refunds</h2>
-    <p>Refund requests for purchases made through Google Play are handled according to <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund policy</a>. We do not process refunds directly, but you're welcome to contact us if you need help locating or requesting a refund through Google.</p>
+    <aside class="toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#free">What the free version includes</a></li>
+        <li><a href="#plans">Paid plans and what they unlock</a></li>
+        <li><a href="#pricing">Pricing, currency and tax</a></li>
+        <li><a href="#trial">Free trial terms</a></li>
+        <li><a href="#renewal">Auto-renewal and billing cycle</a></li>
+        <li><a href="#lifetime">One-time lifetime purchase</a></li>
+        <li><a href="#restore">Restoring purchases and device limits</a></li>
+        <li><a href="#changes-plan">Upgrading, downgrading and price changes</a></li>
+        <li><a href="#cancel">How to cancel</a></li>
+        <li><a href="#refunds">Refunds</a></li>
+        <li><a href="#failed">Failed payments and grace periods</a></li>
+        <li><a href="#discontinued">If an App is discontinued</a></li>
+        <li><a href="#ads-after">Advertising after purchase</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </aside>
 
-    <h2>7. Payment Methods</h2>
-    <p>All payment methods are managed through your Google Play account. We do not receive, process, or store your card or payment details.</p>
+    <main class="legal-body">
 
-    <h2>8. Changes to This Policy</h2>
-    <p>We may update this Subscription Policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
+      <h2 id="overview">1. Overview</h2>
+      <p>
+        This Subscription &amp; Purchase Policy is issued by <strong>Zentrovaapps (SMC-Private) Limited</strong>
+        (Incorporation No. 0344416) and applies to all in-app purchases and subscriptions offered in any
+        application we publish on Google Play.
+      </p>
+      <div class="note">
+        <p><b>Who takes your payment.</b> Every purchase and subscription is sold and billed by
+        <b>Google Play</b>, using the payment method saved to your Google account. Zentrovaapps does not
+        process payments and never sees your card, bank or wallet details. Because Google is the merchant of
+        record, cancellations and refunds are managed through your Google account rather than by us directly.</p>
+      </div>
 
-    <h2>9. Contact Us</h2>
-    <p>For questions about a subscription, contact us at <a href="mailto:info@zentrovaapps.com">info@zentrovaapps.com</a>.</p>
-  </article>
+      <h2 id="free">2. What the free version includes</h2>
+      <p>
+        Every Zentrovaapps App can be downloaded and used free of charge. The free version includes the core
+        remote-control functionality — device discovery, pairing, the full button layout, volume and playback
+        control — and is supported by advertisements served through Google AdMob. You are never required to
+        purchase anything to control your device.
+      </p>
+
+      <h2 id="plans">3. Paid plans and what they unlock</h2>
+      <p>
+        Apps may offer any combination of the options below. The exact plans, durations and prices available to
+        you are always displayed on the purchase screen inside the App <strong>before</strong> you confirm any
+        transaction, and on the App's Google Play listing.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Option</th><th>Billing</th><th>What it does</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Weekly subscription</td><td>Auto-renews every week</td>
+              <td>Removes all advertising and unlocks Premium Features for as long as the subscription is active</td>
+            </tr>
+            <tr>
+              <td>Monthly subscription</td><td>Auto-renews every month</td>
+              <td>Same as above, billed monthly</td>
+            </tr>
+            <tr>
+              <td>Yearly subscription</td><td>Auto-renews every 12 months</td>
+              <td>Same as above at a lower effective rate, billed annually</td>
+            </tr>
+            <tr>
+              <td>Lifetime (one-time purchase)</td><td>Single payment, never renews</td>
+              <td>Permanent ad-free access and Premium Features for that App, tied to your Google account</td>
+            </tr>
+            <tr>
+              <td>Remove Ads (one-time purchase)</td><td>Single payment, never renews</td>
+              <td>Disables advertising only; other Premium Features are not included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Premium Features typically include an ad-free interface, additional remote layouts and shortcuts,
+        on-screen keyboard and text entry, saving multiple devices, custom button arrangements, and priority
+        email support. Feature sets differ between Apps and are described on each purchase screen.
+      </p>
+      <div class="note warn">
+        <p><b>Each purchase applies to one App only.</b> Buying a subscription or lifetime unlock in one
+        Zentrovaapps application does not remove ads or unlock features in any of our other applications.
+        Purchases are not transferable between Apps.</p>
+      </div>
+
+      <h2 id="pricing">4. Pricing, currency and tax</h2>
+      <ul>
+        <li>Prices are set per country and are shown in your local currency on the purchase screen.</li>
+        <li>The price displayed by Google Play includes any applicable sales tax, VAT or GST where Google is
+            required to collect it.</li>
+        <li>Currency conversion, foreign-transaction fees or charges applied by your bank or card issuer are
+            your responsibility.</li>
+        <li>Promotional or introductory pricing, where offered, applies only for the stated period. After that
+            period the plan renews at the standard price for your country, which is disclosed before you
+            subscribe.</li>
+      </ul>
+
+      <h2 id="trial">5. Free trial terms</h2>
+      <p>
+        Selected plans may include a free trial. Where a trial is offered, the following applies and is also
+        shown on the purchase screen before you commit:
+      </p>
+      <ul>
+        <li>The trial length (for example 3 days or 7 days) and the price that will be charged when it ends are
+            both stated clearly before you start;</li>
+        <li>A valid payment method on your Google account is required to begin a trial;</li>
+        <li>You are <strong>not charged during the trial period</strong>;</li>
+        <li><strong>If you do not cancel at least 24 hours before the trial ends, the subscription starts
+            automatically and your payment method is charged</strong> the full price of the selected plan, and it
+            renews from then on until cancelled;</li>
+        <li>Cancelling during the trial keeps your Premium access until the trial's original end date, after
+            which no charge is made;</li>
+        <li>Free trials are limited to <strong>one per Google account per App</strong>. Google may decline a trial
+            if you have used one for the same App before;</li>
+        <li>Any unused portion of a trial is forfeited if you purchase a subscription before the trial ends.</li>
+      </ul>
+
+      <h2 id="renewal">6. Auto-renewal and billing cycle</h2>
+      <div class="note warn">
+        <p><b>Subscriptions renew automatically.</b> Unless you cancel, your subscription continues
+        indefinitely and your payment method is charged at the start of each new billing period.</p>
+      </div>
+      <ul>
+        <li>Payment is charged to your Google account at confirmation of purchase;</li>
+        <li>Google attempts to renew the subscription within the <strong>24 hours before</strong> the current
+            period ends, at the price then in effect for your plan and country;</li>
+        <li>Each renewal extends access for one further period of the same length;</li>
+        <li>Google Play sends renewal receipts to the email address on your Google account, and you can review
+            every charge in your Google Play order history;</li>
+        <li>Cancelling stops future renewals only — it does not shorten or refund the period you are currently
+            paying for.</li>
+      </ul>
+
+      <h2 id="lifetime">7. One-time lifetime purchase</h2>
+      <p>
+        A lifetime or Remove Ads purchase is a single, non-recurring payment. It does not renew and cannot be
+        cancelled, because there is no ongoing charge to stop.
+      </p>
+      <p>
+        "Lifetime" means the operational lifetime of the App concerned: the entitlement remains valid on your
+        Google account for as long as we publish and support that App and it remains compatible with your
+        device and with Google Play. It is not a guarantee that the App will be published, supported or
+        functional indefinitely, and it does not cover other applications we publish.
+      </p>
+
+      <h2 id="restore">8. Restoring purchases and device limits</h2>
+      <p>
+        Your purchase is attached to the <strong>Google account</strong> used to make it, not to a single handset.
+        If you change phone, reinstall the App or clear its data:
+      </p>
+      <ol>
+        <li>Sign in to the same Google account on the new device;</li>
+        <li>Install the App from Google Play;</li>
+        <li>Open the App and go to <strong>Settings → Restore purchases</strong> (the App also checks
+            automatically on launch).</li>
+      </ol>
+      <p>
+        Entitlements bought through Google Play may also be shared with your Google Play Family group where
+        Google supports and you have enabled family sharing for that product. If a purchase does not restore,
+        contact <a href="mailto:support@zentrovaapps.com">support@zentrovaapps.com</a> with the order ID from
+        your Google Play receipt and we will help.
+      </p>
+
+      <h2 id="changes-plan">9. Upgrading, downgrading and price changes</h2>
+      <h3>Switching plans</h3>
+      <p>
+        You may switch between plans at any time from the purchase screen. Google Play applies a proration
+        credit for the unused portion of your current plan according to its own rules. Upgrades generally take
+        effect immediately; downgrades generally take effect at the end of the current billing period.
+      </p>
+      <h3>Price changes</h3>
+      <p>
+        We may change subscription prices. If we do, Google Play will notify you in advance in accordance with
+        its policies and applicable law, normally by email and through an in-app notice. Depending on your
+        region, a price increase either requires your explicit acceptance before it applies, or gives you a
+        clear opportunity to cancel before the new price takes effect. <strong>If you do not accept the new
+        price, you may cancel and your subscription ends at the close of the current period.</strong> A price
+        change never applies retroactively to a period you have already paid for.
+      </p>
+
+      <h2 id="cancel">10. How to cancel</h2>
+      <p>
+        You can cancel a subscription at any time, for any reason, with no cancellation fee. Cancellation is
+        done through Google Play — uninstalling the App does <strong>not</strong> cancel a subscription and you
+        will continue to be billed.
+      </p>
+
+      <h3>On an Android phone or tablet</h3>
+      <ol>
+        <li>Open the <strong>Google Play Store</strong> app;</li>
+        <li>Tap your <strong>profile icon</strong> at the top right;</li>
+        <li>Tap <strong>Payments &amp; subscriptions → Subscriptions</strong>;</li>
+        <li>Select the Zentrovaapps subscription you want to end;</li>
+        <li>Tap <strong>Cancel subscription</strong> and follow the prompts.</li>
+      </ol>
+
+      <h3>On a computer</h3>
+      <ol>
+        <li>Go to <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a>;</li>
+        <li>Sign in with the Google account used for the purchase;</li>
+        <li>Find the subscription and click <strong>Manage → Cancel subscription</strong>.</li>
+      </ol>
+
+      <div class="note ok">
+        <p><b>Cancel in time.</b> To avoid being charged for the next period, cancel at least
+        <b>24 hours before</b> the current period or free trial ends. After cancelling, you keep Premium access
+        until the end of the period you have already paid for, and then the App reverts to the free,
+        ad-supported version.</p>
+      </div>
+
+      <h2 id="refunds">11. Refunds</h2>
+      <p>
+        Because Google is the seller of record, refunds are governed by
+        <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund policy</a>.
+      </p>
+      <ul>
+        <li><strong>Within 48 hours of purchase</strong> you can usually request a refund directly through Google
+            Play, either in the Play Store app under your order history or at
+            <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">play.google.com/store/account/orderhistory</a>.</li>
+        <li><strong>After 48 hours</strong>, refund requests are handled by Google and, where Google refers the
+            request to us, considered by us on a case-by-case basis.</li>
+        <li>We will support a refund request where an App is materially defective, where a Premium Feature you
+            paid for cannot be delivered, or where you were charged in error or more than once for the same
+            product.</li>
+        <li>Refunds are not normally given for a change of mind after the service has been used, for a
+            subscription period that has already elapsed, for forgetting to cancel before a renewal or trial
+            ended, or where your device turns out not to be supported and this was disclosed before purchase.</li>
+        <li>Any refund is issued by Google to the original payment method. Processing times are set by Google
+            and your payment provider.</li>
+      </ul>
+      <div class="note">
+        <p><b>Statutory rights.</b> If you are a consumer in the European Union, the United Kingdom or another
+        territory with mandatory consumer-protection law, you may have a statutory right of withdrawal — in the
+        EU and UK, generally 14 days for digital content, which you may waive by choosing to begin using the
+        content immediately. Nothing in this policy limits those rights. Contact us and we will honour them.</p>
+      </div>
+      <p>
+        For any billing problem, email <a href="mailto:support@zentrovaapps.com">support@zentrovaapps.com</a>
+        with the App name, the order ID from your Google Play receipt and a description of the issue. We reply
+        within two business days.
+      </p>
+
+      <h2 id="failed">12. Failed payments and grace periods</h2>
+      <p>
+        If a renewal payment fails — for example because a card has expired or has insufficient funds — Google
+        Play may place your subscription in a grace period or on hold while it retries the charge and asks you
+        to fix the payment method. During a grace period Premium access normally continues; once a subscription
+        goes on hold, Premium Features are suspended and the App returns to its free, ad-supported state until
+        payment succeeds. If payment is never completed, the subscription is cancelled automatically by Google.
+      </p>
+
+      <h2 id="discontinued">13. If an App is discontinued</h2>
+      <p>
+        If we permanently withdraw an App from Google Play, we will stop accepting new subscriptions for it and
+        will not charge further renewals. Existing subscribers keep access for the remainder of the period they
+        have paid for. Where an active paid subscription is cut short by our decision to discontinue the App,
+        we will ask Google to refund the unused portion on a pro-rata basis. One-time purchases are not
+        refundable on discontinuation once the App has been delivered and used, except where required by law.
+      </p>
+
+      <h2 id="ads-after">14. Advertising after purchase</h2>
+      <p>
+        Once an ad-removing purchase or subscription is active and verified, the App stops requesting
+        advertisements entirely and no advertising data is collected for that App, as described in our
+        <a href="privacy-policy.html">Privacy Policy</a>. If ads reappear, it is almost always because the
+        entitlement has not been restored on that device — open <strong>Settings → Restore purchases</strong>, or
+        contact us if that does not resolve it. If a subscription lapses or is cancelled, advertising resumes
+        when the paid period ends.
+      </p>
+
+      <h2 id="changes">15. Changes to this policy</h2>
+      <p>
+        We may update this policy to reflect new plans, changes to Google Play's rules or changes in applicable
+        law. The "Last updated" date at the top of this page shows the current version. Material changes
+        affecting an active subscription will be notified in advance through the App, this website or Google
+        Play. Changes never apply retroactively to a billing period already paid for.
+      </p>
+
+      <h2 id="contact">16. Contact us</h2>
+      <p>For billing, subscription or refund questions, contact us and include your Google Play order ID:</p>
+
+      <div class="contact-box">
+        <b>Zentrovaapps (SMC-Private) Limited</b>
+        <p>Billing &amp; support: <a href="mailto:support@zentrovaapps.com">support@zentrovaapps.com</a></p>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-bottom" style="margin-top:0;padding-top:0;border-top:0">
+        <span>© 2026 Zentrovaapps (SMC-Private) Limited. All rights reserved.</span>
+        <span>
+          <a href="index.html" style="color:var(--ink-2);text-decoration:none">Home</a> ·
+          <a href="privacy-policy.html" style="color:var(--ink-2);text-decoration:none">Privacy Policy</a> ·
+          <a href="terms-of-use.html" style="color:var(--ink-2);text-decoration:none">Terms of Use</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
 </div>
-
-<footer>© <span id="year"></span> Zentrova Apps · zentrovaapps.com</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
