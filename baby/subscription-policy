@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0d18"><meta name="description" content="Subscription and Purchase Policy for BabyTrack on Google Play."><title>BabyTrack Subscription and Purchase Policy | Zentrovaapps</title><style>
+:root{color-scheme:dark;--bg:#0b0d18;--panel:#111626;--ink:#f4f6fb;--muted:#bac4d6;--soft:#8996b0;--line:#2a3449;--cyan:#66d5d1;--violet:#a993ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--cyan);text-underline-offset:3px}
+a:hover{color:#a5f2ef}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;padding:8px 12px;background:#fff;color:#000;z-index:5}
+.skip:focus{left:12px}
+.site-header{border-bottom:1px solid var(--line);background:#101323}
+.header-inner,.hero-inner,.layout,.footer-inner{max-width:1120px;margin:auto;padding-left:24px;padding-right:24px}
+.header-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:var(--ink);text-decoration:none;font-size:17px;font-weight:750;letter-spacing:-.02em;white-space:nowrap}
+.brand-mark{display:inline-grid;place-items:center;width:33px;height:33px;margin-right:9px;border-radius:9px;background:linear-gradient(135deg,#5d7df4,#a35bd7);box-shadow:0 2px 15px #6368f666}
+.site-nav{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:14px}
+.site-nav a{color:var(--muted);text-decoration:none}
+.site-nav a[aria-current=page]{color:var(--cyan)}
+.hero{background:radial-gradient(circle at 75% 0,#09424b 0,transparent 48%),radial-gradient(circle at 12% 15%,#34245e 0,transparent 54%),#0b0d18;border-bottom:1px solid var(--line)}
+.hero-inner{padding-top:66px;padding-bottom:58px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--cyan);font-size:12px;font-weight:800}
+h1{max-width:780px;font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;letter-spacing:-.045em;margin:13px 0 20px}
+.lead{max-width:780px;color:#d3d9e6;font-size:1.16rem;line-height:1.6;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.meta span{border:1px solid #ffffff24;border-radius:40px;padding:7px 14px;color:var(--muted);font-size:13px;background:#ffffff07}
+.layout{display:grid;grid-template-columns:248px minmax(0,1fr);gap:60px;padding-top:42px;padding-bottom:84px}
+.toc{position:sticky;top:24px;align-self:start}
+.toc h2{margin:0 0 14px;color:var(--soft);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.toc a{display:block;padding:6px 0;color:var(--muted);font-size:14px;text-decoration:none;line-height:1.35}
+.toc a:hover{color:var(--cyan)}
+main{min-width:0}
+main section{scroll-margin-top:28px;border-bottom:1px solid var(--line);padding:0 0 26px;margin:0 0 34px}
+main section:last-child{border-bottom:0}
+main h2{font-size:1.48rem;line-height:1.25;letter-spacing:-.025em;margin:0 0 16px}
+main h3{font-size:1.08rem;margin:26px 0 8px;color:#e8edfa}
+main p,main li{color:var(--muted)}
+main p{margin:0 0 15px}
+main ul,main ol{padding-left:24px;margin:0 0 18px}
+main li{margin:5px 0}
+strong{color:var(--ink);font-weight:680}
+.callout{border:1px solid #5fd8d650;border-left:4px solid var(--cyan);border-radius:12px;padding:17px 20px;background:#12303a;margin:20px 0}
+.callout p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:540px}
+th,td{padding:11px 13px;border:1px solid var(--line);text-align:left;vertical-align:top;color:var(--muted)}
+th{background:#192238;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.page-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.page-links a{display:inline-block;padding:9px 14px;border:1px solid var(--line);border-radius:9px;text-decoration:none;color:var(--ink)}
+.site-footer{border-top:1px solid var(--line);background:#090b13}
+.footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 30px;padding-top:28px;padding-bottom:28px;color:var(--soft);font-size:13px}
+.footer-inner p{margin:0}
+@media(max-width:760px){.header-inner{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:14px}.site-nav{gap:7px 16px}.hero-inner{padding-top:42px;padding-bottom:42px}.layout{grid-template-columns:1fr;gap:26px;padding-top:30px}.toc{position:static;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:18px}.toc a{display:inline-block;margin-right:15px}main section{margin-bottom:28px}table{font-size:13px}}
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="https://zentrovaapps.com/"><span class="brand-mark">Z</span>Zentrovaapps</a><nav class="site-nav" aria-label="Legal pages"><a href="privacy-policy.html">Privacy</a><a href="terms-and-conditions.html">Terms</a><a aria-current="page" href="subscription-policy.html">Subscriptions</a></nav></div></header>
+<div class="hero"><div class="hero-inner"><div class="eyebrow">BabyTrack · Legal</div><h1>Subscription and Purchase Policy</h1><p class="lead">How optional BabyTrack purchases, recurring plans, trials, cancellations, and refunds work on Google Play.</p><div class="meta"><span>Effective: 11 October 2026</span><span>Applies to: BabyTrack for Android</span><span>Developer: Zentrovaapps (SMC-Private) Limited</span></div></div></div>
+<div class="layout"><nav class="toc" aria-label="On this page"><h2>On this page</h2><a href="#products">1. Products and prices</a><a href="#billing">2. Billing and renewal</a><a href="#trials">3. Trials and offers</a><a href="#cancel">4. Cancel or manage</a><a href="#access">5. Access after cancellation</a><a href="#refunds">6. Refunds</a><a href="#one-time">7. One-time purchases</a><a href="#changes">8. Changes</a><a href="#support">9. Support</a></nav>
+<main id="main">
+<section id="products"><h2>1. Optional products and prices</h2><p>BabyTrack may offer a free, ad-supported experience and optional premium features or ad removal. A paid product may be a <strong>recurring subscription</strong> or a <strong>one-time in-app purchase</strong>. The exact features, product name, price, currency, billing period, and whether a trial is offered depend on the product and country. We show them on the in-app offer and Google Play purchase screen before you authorize payment. If a feature is free, you do not need to buy a subscription to use that free feature.</p><div class="callout"><p><strong>Review the checkout before you buy.</strong> The Google Play purchase screen states the amount you will actually be charged, how often a subscription renews, and any trial or introductory terms. No specific plan price or trial is promised by this policy.</p></div><p>Subscriptions should provide the ongoing benefits described in their offer throughout the paid period. A feature sold as a one-time benefit will be offered as a one-time product rather than disguised as a subscription.</p></section>
+<section id="billing"><h2>2. Payment and automatic renewal</h2><p>Purchases in the Google Play version of BabyTrack are processed by <strong>Google Play Billing</strong>. Google Play charges your selected payment method under its terms. We do not receive your full payment card details. Unless the checkout clearly says otherwise, a subscription renews automatically at the end of each billing period and Google Play charges the price displayed for that plan until you cancel. Taxes and currency conversions may depend on your location and Google Play account.</p><p>Deleting BabyTrack, clearing local records, or turning off notifications does not cancel a subscription.</p></section>
+<section id="trials"><h2>3. Free trials and introductory offers</h2><p>If a free trial or introductory price is offered, the purchase screen will show its length, eligibility, what is included, when it converts to the standard paid price, the standard price and billing frequency, and how to cancel. Unless you cancel before the trial or introductory period ends, Google Play may begin charging the recurring price shown at checkout. Trial eligibility and any unused trial time are governed by the specific Google Play offer.</p><p>If no trial is displayed at checkout, your selected paid product begins under the price and timing shown there. We do not promise a free trial for every user or plan.</p></section>
+<section id="cancel"><h2>4. How to manage or cancel</h2><ol><li>Open <a href="https://play.google.com/store/account/subscriptions">Google Play Subscriptions</a> while signed into the Google account used to buy BabyTrack.</li><li>Select the BabyTrack subscription.</li><li>Choose <strong>Cancel subscription</strong> and follow Google Play’s confirmation steps.</li></ol><p>You can also open the Play Store app → profile icon → Payments &amp; subscriptions → Subscriptions. If you do not see a subscription, check the Google account used for the purchase. Contact <a href="mailto:info@zentrovaapps.com">info@zentrovaapps.com</a> if you need help identifying the product.</p></section>
+<section id="access"><h2>5. What happens after cancellation</h2><p>For most subscriptions purchased through Google Play, cancellation stops future renewals and paid access continues until the end of the current paid period. Canceling ordinarily does not refund the current period automatically. Different outcomes may apply under Google Play rules or mandatory local law. When paid access ends, premium features or ad removal tied to that subscription may end; your local care records are not deleted solely because a subscription expires.</p></section>
+<section id="refunds"><h2>6. Refunds and billing issues</h2><p>Refund eligibility is determined by <a href="https://support.google.com/googleplay/answer/2479637">Google Play’s refund policies</a> and applicable law. You can request a refund through Google Play using the account that made the purchase. We can help investigate an entitlement that did not unlock, but cannot promise a refund outside Google Play’s processes or override your legal rights. For an unrecognized charge, review your Google Play order history and contact Google Play support promptly.</p></section>
+<section id="one-time"><h2>7. One-time in-app purchases</h2><p>A one-time purchase is charged once at the price shown at checkout and does not automatically renew. Its benefit and any limits are described in that product’s offer. If a non-consumable purchase is eligible for restoration, use the same Google account and any restore control provided by the app. Refunds for one-time purchases follow Google Play’s rules and applicable law.</p></section>
+<section id="changes"><h2>8. Product and policy changes</h2><p>Google Play and Zentrovaapps may change available products or prices. Any price change to an existing subscription will be communicated and handled through Google Play in accordance with its rules and applicable law. We will update this policy when our purchase practices materially change. The current in-app offer and Google Play checkout control the specific commercial details of a new purchase.</p></section>
+<section id="support"><h2>9. Support and related policies</h2><p>For purchase or access questions, contact <a href="mailto:info@zentrovaapps.com">info@zentrovaapps.com</a> and include the product name and your Google Play order number if you are comfortable sharing it. Do not email full card numbers or passwords. Our <a href="privacy-policy.html">Privacy Policy</a> explains purchase data, and our <a href="terms-and-conditions.html">Terms and Conditions</a> govern app use.</p><p>Zentrovaapps (SMC-Private) Limited · Incorporation No. 0344416 · Pakistan</p><div class="page-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms and Conditions</a></div></section>
+</main></div><footer class="site-footer"><div class="footer-inner"><p>© 2026 Zentrovaapps (SMC-Private) Limited. BabyTrack.</p><p><a href="https://zentrovaapps.com/">Zentrovaapps home</a> · <a href="mailto:info@zentrovaapps.com">Contact</a></p></div></footer></body></html>
