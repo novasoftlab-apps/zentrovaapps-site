@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf7f3"><meta name="robots" content="noindex"><title>Join a care team | Baby Tracker</title><style>
+:root{--bg:#fbf7f3;--ink:#2b2522;--muted:#6b625c;--line:#e9dfd6;--action:#b94c36;--lav:#ecebfb;--violet:#5d4da5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh;padding:24px}
+main{max-width:420px;width:100%;text-align:center}h1{font:600 28px/1.25 Georgia,serif;margin:16px 0 8px}p{color:var(--muted);margin:0 0 16px}
+.code{display:inline-block;letter-spacing:6px;font:600 30px/1 Georgia,serif;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:8px 0 20px}
+.btn{display:block;height:52px;line-height:52px;border-radius:999px;background:var(--action);color:#fff;text-decoration:none;font-weight:600;margin-bottom:10px}
+.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.note{background:var(--lav);border-radius:16px;padding:14px 16px;font-size:14px;text-align:left;color:var(--muted)}.note b{color:var(--violet);display:block}
+</style></head><body><main>
+<div style="font-size:44px" aria-hidden="true">🍼</div>
+<h1>You're invited to a care team</h1>
+<p>Open Baby Tracker to see the baby's day and log care alongside the family.</p>
+<div class="code" id="code" aria-label="Invite code">——————</div>
+<a class="btn" id="open" href="#">Open in Baby Tracker</a>
+<a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.zentrovaapps.babytracker">Get Baby Tracker on Google Play</a>
+<div class="note"><b>Already installed?</b>Open the app, tap “Got an invite? Join a care team” (or More → Switch family), and enter the code above. Invites work for 7 days.</div>
+</main><script>
+var c=(new URLSearchParams(location.search).get('code')||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
+if(c){document.getElementById('code').textContent=c;var a=document.getElementById('open');a.href='babytrack://join/'+c;setTimeout(function(){location.href=a.href},300);}
+</script></body></html>
