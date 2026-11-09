@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.zentrovaapps.babytracker",
+    "sha256_cert_fingerprints": [
+      "00:C4:B4:E1:BA:3A:DE:2D:BA:29:5B:6B:E9:7B:6D:DD:DC:03:32:0D:A1:DB:09:4B:FD:7E:B2:45:B8:20:8C:67",
+      "51:21:d7:da:72:81:98:11:70:60:b9:a4:1b:ad:a2:f0:c5:29:78:39:1c:86:fb:9d:99:35:67:d7:5d:ec:e7:66"
+    ]
+  }
+}]
