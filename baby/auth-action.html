@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf7f3"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><title>Baby Tracker</title><style>
+/* Baby Tracker account page: opens from the "reset password" and "verify email" emails (Firebase custom action URL). */
+:root{--bg:#fbf7f3;--ink:#2b2522;--muted:#6b625c;--line:#e9dfd6;--action:#b94c36;--green:#3f9862;--green-pale:#e5f3e9;--danger:#b4352a;--danger-pale:#fbe9e6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh;padding:24px}
+main{max-width:420px;width:100%;text-align:center}h1{font:600 28px/1.25 Georgia,serif;margin:20px 0 8px}p{color:var(--muted);margin:0 0 20px}
+.badge{width:88px;height:88px;border-radius:50%;margin:0 auto;display:grid;place-items:center;background:#fce9e3;color:var(--action)}
+.badge.ok{background:var(--green-pale);color:var(--green)}.badge.err{background:var(--danger-pale);color:var(--danger)}
+.brand{font:600 15px/1 Georgia,serif;color:var(--muted);letter-spacing:.3px;margin-bottom:24px}
+form{text-align:left}label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+.field{display:flex;align-items:center;height:52px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 6px 0 16px}
+.field:focus-within{border-color:var(--action)}.field input{flex:1;border:0;outline:0;font-size:16px;background:transparent;min-width:0}
+.eye{border:0;background:none;color:var(--muted);font-size:14px;font-weight:600;padding:10px}
+.btn{display:block;width:100%;height:52px;border:0;border-radius:999px;background:var(--action);color:#fff;font-size:16px;font-weight:600;margin-top:20px;cursor:pointer}
+.btn:disabled{opacity:.5}.error{color:var(--danger);font-size:14px;margin-top:10px;min-height:20px}
+.hint{font-size:13px;color:var(--muted);margin-top:6px}.foot{font-size:12px;color:var(--muted);margin-top:28px}
+</style></head><body><main id="app">
+<div class="brand">Baby Tracker</div>
+<div class="badge" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" opacity=".3"/><path d="M12 3a9 9 0 0 1 9 9"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/></path></svg></div>
+<h1>One moment…</h1><p>Checking your link.</p>
+</main>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), mode = q.get('mode'), code = q.get('oobCode'), key = q.get('apiKey');
+  var app = document.getElementById('app');
+  var ICON = {
+    ok: '<path d="M20 6 9 17l-5-5"/>',
+    err: '<circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/>',
+    key: '<circle cx="8" cy="15" r="4"/><path d="m10.85 12.15 7.65-7.65M18 5l2 2M15 8l2 2"/>'
+  };
+  function esc(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function screen(kind, title, text, extra) {
+    app.innerHTML = '<div class="brand">Baby Tracker</div><div class="badge ' + (kind === 'key' ? '' : kind) + '" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICON[kind] + '</svg></div><h1>' + esc(title) + '</h1><p>' + esc(text) + '</p>' + (extra || '') + '<div class="foot">Baby Tracker · Zentrova Apps</div>';
+  }
+  function failed(e) {
+    var expired = e && (e.code === 'auth/expired-action-code' || e.code === 'auth/invalid-action-code');
+    screen('err', expired ? 'This link has expired' : 'Something went wrong', expired ? 'Links work once and only for a short time. Open Baby Tracker and ask for a new one.' : 'Please try again, or open Baby Tracker and ask for a new link.');
+  }
+  if (!mode || !code || !key) { screen('err', 'This link is incomplete', 'Open the newest email from Baby Tracker and tap the button again.'); return; }
+  firebase.initializeApp({ apiKey: key });
+  var auth = firebase.auth();
+
+  if (mode === 'verifyEmail') {
+    auth.applyActionCode(code).then(function () { screen('ok', 'Your email is verified', 'Go back to the Baby Tracker app and tap “I’ve verified my email” to continue.'); }, failed);
+  } else if (mode === 'resetPassword') {
+    auth.verifyPasswordResetCode(code).then(function (email) {
+      screen('key', 'Choose a new password', 'For ' + email, '<form id="f" novalidate><label for="pw">New password</label><div class="field"><input id="pw" type="password" autocomplete="new-password" minlength="8" required><button type="button" class="eye" id="eye">Show</button></div><div class="hint">At least 8 characters.</div><div class="error" id="err" role="alert"></div><button class="btn" id="go">Save new password</button></form>');
+      var pw = document.getElementById('pw'), err = document.getElementById('err'), go = document.getElementById('go');
+      document.getElementById('eye').onclick = function () { var s = pw.type === 'password'; pw.type = s ? 'text' : 'password'; this.textContent = s ? 'Hide' : 'Show'; };
+      document.getElementById('f').onsubmit = function (ev) {
+        ev.preventDefault();
+        if (pw.value.length < 8) { err.textContent = 'Use at least 8 characters.'; return; }
+        go.disabled = true; err.textContent = '';
+        auth.confirmPasswordReset(code, pw.value).then(function () { screen('ok', 'Password updated', 'Open Baby Tracker and sign in with your new password.'); }, function (e) {
+          go.disabled = false;
+          if (e.code === 'auth/weak-password') err.textContent = 'Choose a stronger password.'; else failed(e);
+        });
+      };
+    }, failed);
+  } else if (mode === 'recoverEmail') {
+    auth.checkActionCode(code).then(function (info) { return auth.applyActionCode(code).then(function () { screen('ok', 'Email restored', 'Your sign-in email is back to ' + info.data.email + '. If you didn’t ask for the change, reset your password in Baby Tracker.'); }); }, failed);
+  } else {
+    screen('err', 'This link isn’t supported', 'Open Baby Tracker and try again.');
+  }
+})();
+</script></body></html>
